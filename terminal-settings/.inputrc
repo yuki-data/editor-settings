@@ -1,0 +1,14 @@
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# Make Tab cycle between possible completions
+# Cycle forward: Tab
+# Cycle backward: Shift-Tab
+
+# TAB: menu-complete
+# Control-l: complete
+# "\e[Z": menu-complete-backward
+
+C-i: menu-complete
+C-l: complete
+"\e[Z": "\e-1\C-i"

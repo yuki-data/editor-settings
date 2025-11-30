@@ -1,0 +1,59 @@
+# username: PCユーザー名を設定
+# git_user_name: gitユーザー名を設定
+# git_user_email: gitユーザーメールを設定
+
+[core]
+	# excludesfile = /Users/{username}/.gitignore_global
+	editor = code --wait
+	quotepath = false
+	ignorecase = false
+	autocrlf = false
+	filemode = false
+
+[user]
+	name = {git_user_name}
+	email = {git_user_email}
+
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+
+[alias]
+	ln = log --name-only --oneline --pretty=format:'%Cgreen[%cd] %d %Cblue%h %Cred<%cn> %Creset%s' --date=short  --decorate --graph --branches --tags --remotes
+	brs = branch -av --sort=-committerdate
+	br = branch -a --sort=-committerdate --format='%(HEAD) %(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset)) %(contents:subject)'
+	graph = log --pretty=format:'%Cgreen[%cd] %d %Cblue%h %Cred<%cn> %Creset%s' --date=short  --decorate --graph --branches --tags --remotes
+	la = log --oneline --all
+	l5 = log --oneline --all -n 5
+	recent = !git branch -v --sort=committerdate --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold red)%(committerdate:relative)|%(color:blue)%(subject)|%(color:magenta)%(authorname)%(color:reset)' | column -ts '|'
+	# `git logdiff branch1 branch2`としてブランチ間のログを出す
+	logdiff = "!f() { git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' \"$1\"..\"$2\"; }; f"
+[credential]
+	helper = osxkeychain
+
+[merge]
+	tool = vscode
+	conflictStyle = diff3
+
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[init]
+	defaultBranch = main
