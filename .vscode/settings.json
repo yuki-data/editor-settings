@@ -1,0 +1,144 @@
+{
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 16,
+  "editor.fontFamily": "Monaco, Menlo, 'Courier New', monospace",
+  "editor.mouseWheelZoom": true,
+  "editor.fontWeight": "bold",
+  "files.trimTrailingWhitespace": true,
+  "[html]": {
+    "editor.tabSize": 2,
+    "files.trimTrailingWhitespace": false,
+    "editor.formatOnPaste": true, // ペースト時に自動でフォーマット
+    "editor.formatOnSave": true, // ファイル保存時に自動でフォーマット
+    "editor.formatOnType": true, // 入力した行を自動でフォーマット
+    "editor.hover.enabled": false,
+    "editor.defaultFormatter": "vscode.html-language-features" // HTML上のタグをマウスホバーしたときの説明文を非表示
+  },
+  "[erb]": {
+    "editor.tabSize": 2
+  },
+  "[haml]": {
+    "editor.tabSize": 2
+  },
+  "[ruby]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "rebornix.ruby"
+  },
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": false
+  },
+  "[css]": {
+    "editor.tabSize": 2,
+    "editor.formatOnPaste": true, // ペースト時に自動でフォーマット
+    "editor.formatOnSave": true, // ファイル保存時に自動でフォーマット
+    "editor.formatOnType": true // 入力した行を自動でフォーマット
+  },
+  "[scss]": {
+    "editor.tabSize": 2,
+    "editor.formatOnPaste": true, // ペースト時に自動でフォーマット
+    "editor.formatOnSave": true, // ファイル保存時に自動でフォーマット
+    "editor.formatOnType": true // 入力した行を自動でフォーマット
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true // ファイル保存時に自動でフォーマット
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true // ファイル保存時に自動でフォーマット
+  },
+  "[graphql]": {
+    "editor.tabSize": 2
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.variables": {
+    // Emmet で展開される HTML の言語を変更
+    "lang": "ja"
+  },
+  "emmet.includeLanguages": {
+    // emmetをrails erbでも使用
+    "erb": "html"
+  },
+  "editor.renderControlCharacters": true,
+  "html.format.contentUnformatted": "pre, code, textarea, title, h1, h2, h3, h4, h5, h6, p", // タグ内の記述はフォーマットしない
+  "html.format.extraLiners": "", // head, body, /html タグの前に改行を入れない
+  "html.format.unformatted": null, // フレージング・コンテンツ（旧インライン要素のようなタグ）はフォーマットしない
+  "html.format.wrapLineLength": 0, // 行の文字数制限を無くし自動で改行させない
+  "search.exclude": {
+    // 検索対象外にするファイル設定（ files.exclude のファイルも含む）
+    "**/tmp": true,
+    "**/node_modules": true
+  },
+  "window.title": "${activeEditorMedium}${separator}${rootName}", // ウインドウ上部に表示する文字列の設定
+  "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
+  "workbench.editor.tabSizing": "shrink", // タブの表示設定
+  "workbench.startupEditor": "none",
+  "breadcrumbs.enabled": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.useLanguageServer": true,
+  "solargraph.diagnostics": true,
+  "solargraph.logLevel": "debug",
+  "code-runner.runInTerminal": true,
+  "ruby.useBundler": true,
+  "solargraph.useBundler": true,
+  "ruby.format": "rubocop",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "telemetry.telemetryLevel": "off",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "security.workspace.trust.untrustedFiles": "open",
+  "notebook.lineNumbers": "on",
+  "notebook.markup.fontSize": 14,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // "editor.defaultFormatter": "vscode.typescript-language-features",
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true // ファイル保存時に自動でフォーマット
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "jest.autoRun": "off",
+  "git.mergeEditor": false,
+  "tabnine.experimentalAutoImports": true,
+  // "aws.telemetry": false,
+  "editor.inlineSuggest.enabled": true,
+  "gitlens.views.branches.branches.layout": "list",
+  "workbench.colorTheme": "Default Light+",
+  "remote.SSH.defaultExtensions": ["gitpod.gitpod-remote-ssh"],
+  // "workbench.editor.showTabs": false,
+  "flake8.args": ["--ignore=E501,W504,E302,E261"],
+  "editor.minimap.enabled": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "workbench.editor.alwaysShowEditorActions": false,
+  "remote.SSH.remotePlatform": {
+    "*.gitpod.io": "linux"
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "cloudcode.duetAI.project": "",
+  "geminicodeassist.enableTelemetry": false,
+  "geminicodeassist.codeGenerationPaneViewEnabled": true,
+  "accessibility.voice.speechLanguage": "ja-JP",
+  "window.newWindowProfile": "既定",
+  "projectManager.sortList": "Recent"
+}
